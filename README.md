@@ -12,6 +12,7 @@ Historical borders for each year the atlas shows, plus the religion, culture and
 |---|---|---|
 | Historical borders, one JSON file per year, including that year's territory raster | `site/eras/` | GPL-3.0, modified from [historical-basemaps](https://github.com/aourednik/historical-basemaps) by André Ourednik and contributors, snapshot `da7a4b735ecef70aebdc9c73e409d8a2500d50f3` |
 | Era index and realm registry | `site/data/eras.json` | GPL-3.0 |
+| Realm search index: which era maps each realm name appears on, built from `site/eras/` by `data-source/scripts/build_realm_index.py` | `site/data/realm-index.json` | GPL-3.0 |
 | Religion, culture and development rasters | `site/rel/`, `site/cul/`, `site/dev/` | GPL-3.0 |
 | Layer indexes and the per-territory summaries made from them | `site/data/religions.json`, `cultures.json`, `develop.json`, `ovmain.json` | GPL-3.0 |
 | Build scripts, correction scripts, the n/a register, and the 2026 correction records | `data-source/` | GPL-3.0 |

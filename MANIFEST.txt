@@ -1,15 +1,15 @@
 # The Wheeler Atlas map data
 # File sizes in bytes. One file per line: <bytes><TAB><path>
 # MANIFEST.txt is not listed.
-# files: 722
-# bytes: 57956091
+# files: 724
+# bytes: 58148862
 
 35149	LICENSE
 4423	NOTICE.md
-7949	README.md
+8127	README.md
 7860	data-source/NA-REGISTER.csv
 2250	data-source/NOTICE.md
-4954	data-source/README.md
+5205	data-source/README.md
 35149	data-source/hb-gpl/LICENSE
 826	data-source/hb-gpl/NOTICE.md
 86459	data-source/hb-gpl/crosswalk.jsonl
@@ -460,6 +460,7 @@
 344788	data-source/hb-gpl/lineages.jsonl
 394969	data-source/hb-gpl/snapshots.jsonl
 77	data-source/requirements.txt
+2904	data-source/scripts/build_realm_index.py
 1458	data-source/scripts/common.py
 94879	data-source/scripts/era_edits.py
 910	data-source/scripts/fetch_natural_earth.py
@@ -544,6 +545,7 @@
 61569	site/data/develop.json
 185656	site/data/eras.json
 271791	site/data/ovmain.json
+189438	site/data/realm-index.json
 41095	site/data/religions.json
 70392	site/dev/100.png
 102253	site/dev/1000.png

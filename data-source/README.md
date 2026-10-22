@@ -18,6 +18,7 @@ scripts/
   fixes-2026/             fix_batch3.py, fix_batch4.py: October 2026 name corrections applied to the era files;
                           build_disputed.py: hatched disputed areas (Natural Earth, public domain)
   unpack_eras.py          writes the deployed era rasters back out as PNG files
+  build_realm_index.py    writes site/data/realm-index.json (which era maps each realm name is on) for the map's search
 ```
 
 ## Rebuilding
@@ -28,6 +29,8 @@ The border pipeline:
 3. `s6_eras.py` (reads historical-basemaps from `HHA_HB`, default `upstream/historical-basemaps`)
 
 Then apply the 2026 name corrections: `python3 fixes-2026/fix_batch3.py <eras folder> <data folder>` and the same for `fix_batch4.py`.
+
+After any change to `site/eras/`, rebuild the search index: `python3 build_realm_index.py` (writes `site/data/realm-index.json`).
 
 The overlay scripts read an atlas site folder set by `HHA_SITE`, and a work folder set by `HHA_WORKDIR` that holds the Natural Earth masks:
 

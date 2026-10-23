@@ -36,8 +36,9 @@ Six overlay images are identical to a neighbouring year, so they are stored once
 | `rel/2010.png` | `rel/2000.png` |
 | `dev/bc123000.png` | `dev/bc10000.png` |
 | `dev/bc8000.png` | `dev/bc10000.png` |
+| `rel/117.png`, `cul/117.png`, `dev/117.png` | the 100 CE files (`rel/100.png`, `cul/100.png`, `dev/100.png`) |
 
-That leaves 59 religion rasters, 61 culture rasters and 60 development rasters for 62 eras. Every era still has its own file in `site/eras/`.
+That leaves 59 religion rasters, 61 culture rasters and 60 development rasters for 63 eras. The 117 CE map is derived from the 100 CE map by `data-source/scripts/derive-2026/make_117.py` and uses the 100 CE layer images. Every era still has its own file in `site/eras/`.
 
 These files are enough to read and reuse the map data. Rebuilding from upstream needs the extra inputs in the next section.
 
@@ -72,6 +73,7 @@ python3 fixes-2026/fix_batch3.py "$HHA_SITE/eras" "$HHA_SITE/data"
 python3 fixes-2026/fix_batch4.py "$HHA_SITE/eras" "$HHA_SITE/data"
 python3 fixes-2026/fix_batch5.py "$HHA_SITE/eras" "$HHA_SITE/data"
 python3 fixes-2026/fix_1530_ottoman.py "$HHA_SITE/eras"
+(cd derive-2026 && python3 make_117.py "$HHA_SITE")
 python3 build_realm_index.py
 ```
 

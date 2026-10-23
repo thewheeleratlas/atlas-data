@@ -71,6 +71,7 @@ Then apply the October 2026 name corrections, and rebuild the search index, from
 python3 fixes-2026/fix_batch3.py "$HHA_SITE/eras" "$HHA_SITE/data"
 python3 fixes-2026/fix_batch4.py "$HHA_SITE/eras" "$HHA_SITE/data"
 python3 fixes-2026/fix_batch5.py "$HHA_SITE/eras" "$HHA_SITE/data"
+python3 fixes-2026/fix_1530_ottoman.py "$HHA_SITE/eras"
 python3 build_realm_index.py
 ```
 

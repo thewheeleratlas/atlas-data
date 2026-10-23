@@ -16,7 +16,7 @@ scripts/
   overlays/               religion_rules.py, culture_rules.py, s8_religion.py, s10_develop.py, cities_hist.py,
                           ovmain_build.py, popw.py, devindex.py (+ maddison2020.csv)
   fixes-2026/             fix_batch3.py, fix_batch4.py, fix_batch5.py: October 2026 name corrections; fix_1530_ottoman.py: 1530 Mamluk lands to the Ottomans; fix_1530_iraq.py: 1530 Iraq, Azerbaijan and western Iran to the Safavids
-  derive-2026/            make_117.py (+ era_tools.py): the 117 CE map, derived from the 100 CE map applied to the era files;
+  derive-2026/            make_117.py, make_bc550.py (+ era_tools.py): the 117 CE and 550 BCE maps, derived from the 100 CE and 500 BCE maps applied to the era files;
                           build_disputed.py: hatched disputed areas (Natural Earth, public domain)
   unpack_eras.py          writes the deployed era rasters back out as PNG files
   build_realm_index.py    writes site/data/realm-index.json (which era maps each realm name is on) for the map's search

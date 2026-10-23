@@ -65,12 +65,16 @@ python3 s6_eras.py
 
 `fetch_natural_earth.py` downloads the public-domain Natural Earth layers listed in `NOTICE.md`. `s6_eras.py` reads historical-basemaps from `HHA_HB`. Check that repository out at commit `da7a4b735ecef70aebdc9c73e409d8a2500d50f3`. The script applies `era_edits.py` while it writes each year.
 
-Then apply the October 2026 name corrections. They are already present in the files shipped here. `fix_batch4.py` also reads `flags.json` from the data folder, which is the website's flag rules and is not part of this repository:
+Then apply the October 2026 name corrections, and rebuild the search index, from `data-source/scripts/`. They are already present in the files shipped here. `fix_batch4.py` also reads `flags.json` from the data folder, which is the website's flag rules and is not part of this repository:
 
 ```
 python3 fixes-2026/fix_batch3.py "$HHA_SITE/eras" "$HHA_SITE/data"
 python3 fixes-2026/fix_batch4.py "$HHA_SITE/eras" "$HHA_SITE/data"
+python3 fixes-2026/fix_batch5.py "$HHA_SITE/eras" "$HHA_SITE/data"
+python3 build_realm_index.py
 ```
+
+`fix_batch5.py` uses `flags.json` when the data folder has one and skips it otherwise.
 
 The overlay scripts use the same `HHA_WORKDIR` and `HHA_SITE`. Run them from `data-source/scripts/overlays/`:
 

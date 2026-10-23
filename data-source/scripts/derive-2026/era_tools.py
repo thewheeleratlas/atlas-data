@@ -160,7 +160,10 @@ class Derive:
         js['ents'] = [{k: e[k] for k in self.ORDER if k in e} for e in js['ents']]
         js['y'] = year; js['d'] = base_year
         js['borders'] = borders(ids, self.LAND)
-        js['notes'] = notes + self.src['notes']
+        # keep the source map's general notes, not its own 'Built from ...' derivation notes
+        inherited = [n for n in self.src['notes'] if not n.startswith('Built from the ')] if self.src.get('d') is not None else self.src['notes']
+        if self.src.get('d') is not None: inherited = [n for n in inherited if n not in getattr(self, 'drop_notes', [])]
+        js['notes'] = notes + inherited
         js['_png'] = write_ids(ids)
         out = {k: js[k] for k in ['y', 'src', 'realms', 'ents', 'borders', 'notes', 'd', '_png'] if k in js}
         assert (read_ids(out) == ids).all()

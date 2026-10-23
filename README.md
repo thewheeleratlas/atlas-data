@@ -26,7 +26,7 @@ The border data started from historical-basemaps. It was rasterized onto the atl
 
 The website keeps its own copies of these files so the map can be served from the site repository. This repository is the corresponding source for those GPL parts. The website source is [thewheeleratlas/website](https://github.com/thewheeleratlas/website).
 
-Six overlay images are identical to a neighbouring year, so they are stored once. The site maps the missing names onto the file that is present:
+Six overlay images are identical to a neighbouring year, so they are stored once, and the 117 CE map reuses the 100 CE layer images. The site maps the missing names onto the file that is present:
 
 | Requested file | File used |
 |---|---|

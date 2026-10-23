@@ -2,11 +2,11 @@
 # File sizes in bytes. One file per line: <bytes><TAB><path>
 # MANIFEST.txt is not listed.
 # files: 729
-# bytes: 58585057
+# bytes: 58585108
 
 35149	LICENSE
 4991	NOTICE.md
-8720	README.md
+8771	README.md
 7860	data-source/NA-REGISTER.csv
 2703	data-source/NOTICE.md
 5396	data-source/README.md

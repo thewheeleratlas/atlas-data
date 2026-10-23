@@ -29,9 +29,13 @@ def read_ids(js):
     return (a[..., 0] | (a[..., 1] << 8)).astype(np.int32)
 
 def write_ids(ids):
-    """Palette PNG with R = low byte, G = high byte (as the deployed files)."""
+    """PNG with R = low byte, G = high byte, as the deployed files: a palette image when there are at most
+    256 distinct ids, otherwise plain RGB."""
     vals = np.unique(ids)
-    assert len(vals) <= 256, 'too many entities for a palette PNG'
+    if len(vals) > 256:
+        rgb = np.zeros(ids.shape + (3,), np.uint8); rgb[..., 0] = ids & 255; rgb[..., 1] = ids >> 8
+        b = io.BytesIO(); Image.fromarray(rgb, 'RGB').save(b, 'PNG', optimize=True)
+        return base64.b64encode(b.getvalue()).decode('ascii')
     lut = np.zeros(int(vals.max()) + 1, np.uint8); lut[vals] = np.arange(len(vals))
     im = Image.fromarray(lut[ids], 'P')
     pal = []

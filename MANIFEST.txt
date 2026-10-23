@@ -1,15 +1,15 @@
 # The Wheeler Atlas map data
 # File sizes in bytes. One file per line: <bytes><TAB><path>
 # MANIFEST.txt is not listed.
-# files: 729
-# bytes: 58585108
+# files: 730
+# bytes: 58694482
 
 35149	LICENSE
-4991	NOTICE.md
-8771	README.md
+5107	NOTICE.md
+8819	README.md
 7860	data-source/NA-REGISTER.csv
-2703	data-source/NOTICE.md
-5396	data-source/README.md
+2877	data-source/NOTICE.md
+5470	data-source/README.md
 35149	data-source/hb-gpl/LICENSE
 826	data-source/hb-gpl/NOTICE.md
 86459	data-source/hb-gpl/crosswalk.jsonl
@@ -460,13 +460,14 @@
 344788	data-source/hb-gpl/lineages.jsonl
 394969	data-source/hb-gpl/snapshots.jsonl
 77	data-source/requirements.txt
-2904	data-source/scripts/build_realm_index.py
+3184	data-source/scripts/build_realm_index.py
 1458	data-source/scripts/common.py
-3443	data-source/scripts/derive-2026/era_tools.py
+3719	data-source/scripts/derive-2026/era_tools.py
 5660	data-source/scripts/derive-2026/make_117.py
 94879	data-source/scripts/era_edits.py
 910	data-source/scripts/fetch_natural_earth.py
 3741	data-source/scripts/fixes-2026/build_disputed.py
+3164	data-source/scripts/fixes-2026/fix_1530_iraq.py
 1569	data-source/scripts/fixes-2026/fix_1530_ottoman.py
 2600	data-source/scripts/fixes-2026/fix_batch3.py
 4532	data-source/scripts/fixes-2026/fix_batch4.py
@@ -549,7 +550,7 @@
 62685	site/data/develop.json
 185864	site/data/eras.json
 273517	site/data/ovmain.json
-190069	site/data/realm-index.json
+189554	site/data/realm-index.json
 41486	site/data/religions.json
 70392	site/dev/100.png
 102253	site/dev/1000.png
@@ -625,7 +626,7 @@
 1346720	site/eras/1453.json
 1317221	site/eras/1492.json
 922899	site/eras/1500.json
-921099	site/eras/1530.json
+1026856	site/eras/1530.json
 1060069	site/eras/1600.json
 997802	site/eras/1650.json
 843693	site/eras/1700.json

@@ -73,6 +73,7 @@ python3 fixes-2026/fix_batch3.py "$HHA_SITE/eras" "$HHA_SITE/data"
 python3 fixes-2026/fix_batch4.py "$HHA_SITE/eras" "$HHA_SITE/data"
 python3 fixes-2026/fix_batch5.py "$HHA_SITE/eras" "$HHA_SITE/data"
 python3 fixes-2026/fix_1530_ottoman.py "$HHA_SITE/eras"
+python3 fixes-2026/fix_1530_iraq.py "$HHA_SITE"
 (cd derive-2026 && python3 make_117.py "$HHA_SITE")
 python3 build_realm_index.py
 ```

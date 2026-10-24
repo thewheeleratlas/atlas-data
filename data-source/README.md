@@ -1,6 +1,6 @@
 # Corresponding source for the GPL-3.0 data
 
-This folder holds the scripts and records that build and correct The Wheeler Atlas's historical border data and its religion, culture and development layers. The scripts, the correction records and the map layers they produce are licensed under the **GNU GPL v3.0** ([`../LICENSE`](../LICENSE); the same text is in `hb-gpl/LICENSE`). `scripts/overlays/maddison2020.csv` is an input under **CC BY 4.0** (Maddison Project Database 2020, Bolt and van Zanden, via Our World in Data) and is not relicensed. This repository is the public corresponding source: https://github.com/thewheeleratlas/atlas-data. See `NOTICE.md` for the origin of the data and what was changed.
+This folder holds the scripts and records that build and correct The Wheeler Atlas's historical border data and its religion, culture and development layers. Everything in this folder is licensed under the **GNU GPL v3.0** (`../site/licenses/GPL-3.0.txt`; the same text is in `hb-gpl/LICENSE`). The root `LICENSE` of the website repository is a proprietary notice and does not relicense this folder. The public corresponding source is https://github.com/thewheeleratlas/atlas-data. See `NOTICE.md` for the origin of the data and what was changed.
 
 The border data is a modified version of **[historical-basemaps](https://github.com/aourednik/historical-basemaps)** by André Ourednik and contributors. The data itself, as deployed, is in `../site/` (see the table in `../README.md`).
 
@@ -16,10 +16,9 @@ scripts/
   overlays/               religion_rules.py, culture_rules.py, s8_religion.py, s10_develop.py, cities_hist.py,
                           ovmain_build.py, popw.py, devindex.py (+ maddison2020.csv)
   fixes-2026/             fix_batch3.py, fix_batch4.py, fix_batch5.py: October 2026 name corrections; fix_1530_ottoman.py: 1530 Mamluk lands to the Ottomans; fix_1530_iraq.py: 1530 Iraq, Azerbaijan and western Iran to the Safavids
-  derive-2026/            make_117.py, make_bc550.py, make_bc525.py (+ era_tools.py): the 117 CE, 550 BCE and 525 BCE maps, derived from the 100 CE, 500 BCE and 550 BCE maps applied to the era files;
+  derive-2026/            make_117.py, make_bc550.py, make_bc525.py, make_bc250.py (+ era_tools.py): the 117 CE, 550 BCE, 525 BCE and 250 BCE maps, derived from the 100 CE, 500 BCE, 550 BCE and 300 BCE maps applied to the era files;
                           build_disputed.py: hatched disputed areas (Natural Earth, public domain)
   unpack_eras.py          writes the deployed era rasters back out as PNG files
-  build_realm_index.py    writes site/data/realm-index.json (which era maps each realm name is on) for the map's search
 ```
 
 ## Rebuilding
@@ -29,9 +28,7 @@ The border pipeline:
 2. `s1_masks.py`
 3. `s6_eras.py` (reads historical-basemaps from `HHA_HB`, default `upstream/historical-basemaps`)
 
-Then apply the 2026 name corrections: `python3 fixes-2026/fix_batch3.py <eras folder> <data folder>` and the same for `fix_batch4.py` and `fix_batch5.py`.
-
-After any change to `site/eras/`, rebuild the search index: `python3 build_realm_index.py` (writes `site/data/realm-index.json`).
+Then apply the 2026 name corrections: `python3 fixes-2026/fix_batch3.py <eras folder> <data folder>` and the same for `fix_batch4.py` and `fix_batch5.py`, then rebuild the search index with `scripts/build_realm_index.py` at the repository root.
 
 The overlay scripts read an atlas site folder set by `HHA_SITE`, and a work folder set by `HHA_WORKDIR` that holds the Natural Earth masks:
 

@@ -1,15 +1,15 @@
 # The Wheeler Atlas map data
 # File sizes in bytes. One file per line: <bytes><TAB><path>
 # MANIFEST.txt is not listed.
-# files: 734
-# bytes: 59462717
+# files: 736
+# bytes: 59847269
 
 35149	LICENSE
-5340	NOTICE.md
-9200	README.md
+5580	NOTICE.md
+9407	README.md
 7860	data-source/NA-REGISTER.csv
-3221	data-source/NOTICE.md
-5544	data-source/README.md
+3613	data-source/NOTICE.md
+5297	data-source/README.md
 35149	data-source/hb-gpl/LICENSE
 826	data-source/hb-gpl/NOTICE.md
 86459	data-source/hb-gpl/crosswalk.jsonl
@@ -464,6 +464,7 @@
 1458	data-source/scripts/common.py
 10133	data-source/scripts/derive-2026/era_tools.py
 5660	data-source/scripts/derive-2026/make_117.py
+7204	data-source/scripts/derive-2026/make_bc250.py
 2423	data-source/scripts/derive-2026/make_bc525.py
 3936	data-source/scripts/derive-2026/make_bc550.py
 94879	data-source/scripts/era_edits.py
@@ -548,12 +549,12 @@
 55821	site/cul/bc5000.png
 104011	site/cul/bc700.png
 53416	site/cul/bc8000.png
-237807	site/data/cultures.json
-64827	site/data/develop.json
-186279	site/data/eras.json
-276849	site/data/ovmain.json
-191039	site/data/realm-index.json
-42270	site/data/religions.json
+239637	site/data/cultures.json
+65928	site/data/develop.json
+186549	site/data/eras.json
+278730	site/data/ovmain.json
+191936	site/data/realm-index.json
+42674	site/data/religions.json
 70392	site/dev/100.png
 102253	site/dev/1000.png
 102982	site/dev/1066.png
@@ -668,6 +669,7 @@
 332030	site/eras/bc1500.json
 335909	site/eras/bc200.json
 508853	site/eras/bc2000.json
+370373	site/eras/bc250.json
 356997	site/eras/bc300.json
 542549	site/eras/bc3000.json
 355985	site/eras/bc323.json

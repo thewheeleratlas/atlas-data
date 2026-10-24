@@ -2,12 +2,12 @@
 # File sizes in bytes. One file per line: <bytes><TAB><path>
 # MANIFEST.txt is not listed.
 # files: 737
-# bytes: 59851468
+# bytes: 59851458
 
 35149	LICENSE
 5703	NOTICE.md
 9407	README.md
-7860	data-source/NA-REGISTER.csv
+7859	data-source/NA-REGISTER.csv
 3744	data-source/NOTICE.md
 5297	data-source/README.md
 35149	data-source/hb-gpl/LICENSE
@@ -554,7 +554,7 @@
 65928	site/data/develop.json
 186618	site/data/eras.json
 278743	site/data/ovmain.json
-191976	site/data/realm-index.json
+191975	site/data/realm-index.json
 42674	site/data/religions.json
 70392	site/dev/100.png
 102253	site/dev/1000.png
@@ -626,10 +626,10 @@
 662017	site/eras/1279.json
 662830	site/eras/1300.json
 726089	site/eras/1400.json
-1346071	site/eras/1450.json
-1346720	site/eras/1453.json
-1317221	site/eras/1492.json
-922899	site/eras/1500.json
+1346069	site/eras/1450.json
+1346718	site/eras/1453.json
+1317219	site/eras/1492.json
+922897	site/eras/1500.json
 1027279	site/eras/1530.json
 1060069	site/eras/1600.json
 997802	site/eras/1650.json

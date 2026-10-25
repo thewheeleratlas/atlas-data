@@ -2,3 +2,4 @@
 numpy>=2.0
 opencv-python-headless>=4.9
 scipy>=1.12
+pyoxipng>=9.0   # optional: compresses the era rasters as deployed (fixes-2026/fix_slivers.py)

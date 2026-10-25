@@ -1,14 +1,14 @@
 # The Wheeler Atlas map data
 # File sizes in bytes. One file per line: <bytes><TAB><path>
 # MANIFEST.txt is not listed.
-# files: 739
-# bytes: 58797689
+# files: 740
+# bytes: 58827128
 
 35149	LICENSE
-6488	NOTICE.md
+6649	NOTICE.md
 9407	README.md
 7859	data-source/NA-REGISTER.csv
-4568	data-source/NOTICE.md
+4749	data-source/NOTICE.md
 5297	data-source/README.md
 35149	data-source/hb-gpl/LICENSE
 826	data-source/hb-gpl/NOTICE.md
@@ -476,6 +476,7 @@
 2600	data-source/scripts/fixes-2026/fix_batch3.py
 4532	data-source/scripts/fixes-2026/fix_batch4.py
 4600	data-source/scripts/fixes-2026/fix_batch5.py
+8950	data-source/scripts/fixes-2026/fix_hre_1600.py
 10578	data-source/scripts/fixes-2026/fix_hre_split.py
 12161	data-source/scripts/fixes-2026/fix_slivers.py
 34898	data-source/scripts/overlays/cities_hist.py
@@ -554,9 +555,9 @@
 53416	site/cul/bc8000.png
 239637	site/data/cultures.json
 65928	site/data/develop.json
-186689	site/data/eras.json
-279527	site/data/ovmain.json
-192361	site/data/realm-index.json
+186690	site/data/eras.json
+279800	site/data/ovmain.json
+192480	site/data/realm-index.json
 42674	site/data/religions.json
 70392	site/dev/100.png
 102253	site/dev/1000.png
@@ -633,7 +634,7 @@
 1260616	site/eras/1492.json
 843710	site/eras/1500.json
 857753	site/eras/1530.json
-1028539	site/eras/1600.json
+1048293	site/eras/1600.json
 994049	site/eras/1650.json
 843679	site/eras/1700.json
 835378	site/eras/1715.json

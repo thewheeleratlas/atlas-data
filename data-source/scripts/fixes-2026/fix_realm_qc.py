@@ -22,6 +22,15 @@ FIX-151 Names for their age:
 FIX-152 Spelling: Britany (Brittany), Burgandy (Burgundy), Rajastan (Rajasthan), and "Gambia, The" (The Gambia from
         independence in 1965, also where the 2026 map had "Gambia"; Gambia before).
 
+FIX-153 Judgement calls (Greg Wheeler, 26 Oct 2026):
+        "Senegal" on the 1530-1815 maps, before any Senegal: the Wolof and Fula kingdoms (Jolof, Cayor, Waalo, Futa
+        Toro) on the 1530-1650 maps, and the Wolof kingdoms of Waalo and Cayor on the 1700-1815 maps.
+        "Belize" on the 1650-1750 maps: the Bay of Honduras settlements of the British logwood cutters (the Baymen),
+        on Maya land; the name Belize came later.
+        The Turks and Caicos Islands are left unclaimed on the 1530-1650 maps: the Lucayans were carried off by about
+        1513, and Bermudian salt-rakers came only in the 1680s.
+        "Nordic Late Neolithic" on the 1500 BCE map: the Nordic Bronze Age had begun by about 1700 BCE.
+
 Borders, areas and labels are re-traced with ../derive-2026/era_tools.py where a territory changes (Hong Kong); the
 other fixes change names or the realm a territory belongs to. Afterwards: python3 scripts/build_realm_index.py."""
 import collections, json, os, sys
@@ -44,6 +53,10 @@ RENAME = [
     (1715, 1800, 'Haiti', 'Saint-Domingue'),
     (1650, 1880, 'Malaya', 'Malay sultanates'),
     (1800, 1880, 'Somalia', 'Somali sultanates'),
+    (1530, 1650, 'Senegal', 'Wolof and Fula kingdoms'),
+    (1700, 1815, 'Senegal', 'Wolof kingdoms (Waalo and Cayor)'),
+    (1650, 1750, 'Belize', 'Bay of Honduras settlements'),
+    (-1500, -1500, 'Nordic Late Neolithic (Dagger period)', 'Nordic Bronze Age cultures'),
     (-10 ** 7, 9999, 'Britany', 'Brittany'),
     (-10 ** 7, 9999, 'Burgandy', 'Burgundy'),
     (-10 ** 7, 9999, 'Rajastan', 'Rajasthan'),
@@ -59,6 +72,9 @@ NOTE = {
     'Haiti': 'Haiti was the French colony of Saint-Domingue until independence in 1804.',
     'Malaya': '"Malaya" is a British-era name; the peninsula and its neighbours were Malay sultanates.',
     'Somalia': 'Somalia is a 20th-century state; the region was held by Somali sultanates and clans.',
+    'Senegal': 'There was no Senegal before the French colony; the area was held by the Wolof and Fula kingdoms.',
+    'Belize': 'The British logwood cutters\' settlements on the Bay of Honduras were called Belize only later.',
+    'Nordic Late Neolithic (Dagger period)': 'The Nordic Bronze Age had begun by about 1700 BCE.',
 }
 
 
@@ -97,10 +113,11 @@ def fix_era(key, y, LAND):
                 if 'l' in e: e.pop('l')
             log['FIX-149 Guanches'] += 1
             notes.append('The Canary Islands were conquered by Castile by 1496; the Guanche territory is Castilian/Spanish here.')
-    # FIX-150 Hong Kong joins the Qing territory it borders most
-    if 1650 <= y <= 1800:
-        hk = [i + 1 for i, e in enumerate(js['ents']) if e['n'] == 'Hong Kong' and e.get('a')]
-        if hk:
+    # FIX-150 Hong Kong joins the Qing territory it borders most; FIX-153 the Turks and Caicos are unclaimed 1530-1650
+    tc = [i + 1 for i, e in enumerate(js['ents']) if e['n'] == 'Turks and Caicos Islands' and e.get('a')] if 1530 <= y <= 1650 else []
+    if 1650 <= y <= 1800 or tc:
+        hk = [i + 1 for i, e in enumerate(js['ents']) if e['n'] == 'Hong Kong' and e.get('a')] if 1650 <= y <= 1800 else []
+        if hk or tc:
             same, bad = T.check_roundtrip(js, LAND)
             assert same and all(x[1] == x[2] and x[3] == x[4] for x in bad), f'tracing does not reproduce the {key} map; stop'
             ids = T.read_ids(js); orig = ids.copy()
@@ -114,7 +131,10 @@ def fix_era(key, y, LAND):
                 cand = [v for v in nb if js['ents'][v - 1]['r'] == qing]
                 t = collections.Counter(cand).most_common(1)[0][0]
                 ids[m] = t; log['FIX-150 Hong Kong px'] += int(m.sum())
-            notes.append('Hong Kong was part of Qing China until 1841; it no longer shows as a separate territory.')
+            if hk: notes.append('Hong Kong was part of Qing China until 1841; it no longer shows as a separate territory.')
+            for i in tc:
+                m = ids == i; ids[m] = 0; log['FIX-153 Turks and Caicos px'] += int(m.sum())
+            if tc: notes.append('The Turks and Caicos Islands were uninhabited from about 1513 until the 1680s.')
             for i in set(np.unique(orig[ids != orig]).tolist()) | set(np.unique(ids[ids != orig]).tolist()):
                 if i == 0: continue
                 e = js['ents'][i - 1]; a, b, l = T.stats(ids, i)
@@ -144,7 +164,7 @@ LAND = None
 total = collections.Counter()
 for e in meta['eras']:
     y, key = e['y'], e['f']
-    if 1650 <= y <= 1800 and LAND is None:
+    if 1530 <= y <= 1800 and LAND is None:
         LAND = T.land_mask(f'{SITE}/eras', [x['f'] for x in meta['eras']])
     r = fix_era(key, y, LAND)
     if r:

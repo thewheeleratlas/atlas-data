@@ -2,13 +2,13 @@
 # File sizes in bytes. One file per line: <bytes><TAB><path>
 # MANIFEST.txt is not listed.
 # files: 743
-# bytes: 58579367
+# bytes: 58583657
 
 35149	LICENSE
-8744	NOTICE.md
+9034	NOTICE.md
 9407	README.md
 11019	data-source/NA-REGISTER.csv
-6930	data-source/NOTICE.md
+7220	data-source/NOTICE.md
 5297	data-source/README.md
 35149	data-source/hb-gpl/LICENSE
 826	data-source/hb-gpl/NOTICE.md
@@ -480,7 +480,7 @@
 10578	data-source/scripts/fixes-2026/fix_hre_split.py
 10185	data-source/scripts/fixes-2026/fix_overlay_judgement.py
 16882	data-source/scripts/fixes-2026/fix_overlay_overseas.py
-8517	data-source/scripts/fixes-2026/fix_realm_qc.py
+10309	data-source/scripts/fixes-2026/fix_realm_qc.py
 12161	data-source/scripts/fixes-2026/fix_slivers.py
 34898	data-source/scripts/overlays/cities_hist.py
 1450	data-source/scripts/overlays/common.py
@@ -560,7 +560,7 @@
 65928	site/data/develop.json
 186695	site/data/eras.json
 279740	site/data/ovmain.json
-192681	site/data/realm-index.json
+192848	site/data/realm-index.json
 42779	site/data/religions.json
 70392	site/dev/100.png
 102253	site/dev/1000.png
@@ -636,15 +636,15 @@
 1284115	site/eras/1453.json
 1260620	site/eras/1492.json
 843768	site/eras/1500.json
-857804	site/eras/1530.json
-1048343	site/eras/1600.json
-994043	site/eras/1650.json
-843693	site/eras/1700.json
-835438	site/eras/1715.json
-850499	site/eras/1750.json
-689537	site/eras/1783.json
-692161	site/eras/1800.json
-572357	site/eras/1815.json
+857908	site/eras/1530.json
+1048443	site/eras/1600.json
+994290	site/eras/1650.json
+843981	site/eras/1700.json
+835705	site/eras/1715.json
+850766	site/eras/1750.json
+689686	site/eras/1783.json
+692310	site/eras/1800.json
+572506	site/eras/1815.json
 544124	site/eras/1848.json
 408279	site/eras/1871.json
 403806	site/eras/1878.json
@@ -673,7 +673,7 @@
 329933	site/eras/bc1000.json
 542364	site/eras/bc10000.json
 44723	site/eras/bc123000.json
-327418	site/eras/bc1500.json
+327449	site/eras/bc1500.json
 331486	site/eras/bc200.json
 491047	site/eras/bc2000.json
 348911	site/eras/bc250.json

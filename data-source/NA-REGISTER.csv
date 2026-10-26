@@ -73,3 +73,23 @@ Border map (not changed),—,"5000 BCE map: the territory labelled ""Kelteminar"
 Border map (not changed),—,"Svalbard is drawn inside ""Norse peoples"" / ""Nordic Late Neolithic"" territories although it was uninhabited until the 1900s",1500 BCE to 1066 CE,Border data issue,Culture shows n/a there
 Border map (not changed),—,"Madagascar is drawn as a ""Hunters-gatherers"" territory in deep time; people arrived much later",10000 BCE to 3000 BCE,Border data issue,Culture shows n/a there
 Border map (not changed),—,Māori territory is drawn in New Zealand from 1000 CE; most scholars date first settlement to c. 1250–1300,1000 CE to 1210 CE,Border data issue,"Culture shows n/a until 1210, Maori from 1279"
+Map area,Culture,Réunion: uninhabited until French settlement in 1665,to 1664 CE,Open,Set to n/a 2026-10-26: no people there yet (fix_overlay_overseas.py)
+Map area,Religion,Réunion: uninhabited until French settlement in 1665,to 1664 CE,Open,Set to n/a 2026-10-26: no people there yet (fix_overlay_overseas.py)
+Map area,Culture,Mayotte: no settlement attested before c. 700,to 699 CE,Open,Set to n/a 2026-10-26: no people there yet (fix_overlay_overseas.py)
+Map area,Religion,Mayotte: no settlement attested before c. 700,to 699 CE,Open,Set to n/a 2026-10-26: no people there yet (fix_overlay_overseas.py)
+Map area,Culture,Azores: uninhabited until Portuguese settlement in the 1430s,to 1419 CE,Open,Set to n/a 2026-10-26: no people there yet (fix_overlay_overseas.py)
+Map area,Religion,Azores: uninhabited until Portuguese settlement in the 1430s,to 1419 CE,Open,Set to n/a 2026-10-26: no people there yet (fix_overlay_overseas.py)
+Map area,Culture,Madeira: uninhabited until Portuguese settlement in 1420,to 1419 CE,Open,Set to n/a 2026-10-26: no people there yet (fix_overlay_overseas.py)
+Map area,Religion,Madeira: uninhabited until Portuguese settlement in 1420,to 1419 CE,Open,Set to n/a 2026-10-26: no people there yet (fix_overlay_overseas.py)
+Map area,Culture,Galápagos: no permanent settlement until 1832,to 1831 CE,Open,Set to n/a 2026-10-26: no people there yet (fix_overlay_overseas.py)
+Map area,Religion,Galápagos: no permanent settlement until 1832,to 1831 CE,Open,Set to n/a 2026-10-26: no people there yet (fix_overlay_overseas.py)
+Map area,Culture,Svalbard: no permanent settlement until the 1900s,to 1899 CE,Open,Set to n/a 2026-10-26: no people there yet (fix_overlay_overseas.py)
+Map area,Religion,Svalbard: no permanent settlement until the 1900s,to 1899 CE,Open,Set to n/a 2026-10-26: no people there yet (fix_overlay_overseas.py)
+Map area,Culture,Canary Islands: settlement before c. 1000 BCE not attested,to 1001 BCE,Open,Set to n/a 2026-10-26: no people there yet (fix_overlay_overseas.py)
+Map area,Religion,Canary Islands: settlement before c. 1000 BCE not attested,to 1001 BCE,Open,Set to n/a 2026-10-26: no people there yet (fix_overlay_overseas.py)
+Map area,Culture,Easter Island (Rapa Nui): settled c. 1000–1200,to 999 CE,Open,Set to n/a 2026-10-26: no people there yet (fix_overlay_overseas.py)
+Map area,Religion,Easter Island (Rapa Nui): settled c. 1000–1200,to 999 CE,Open,Set to n/a 2026-10-26: no people there yet (fix_overlay_overseas.py)
+Map area,Culture,Falkland Islands: uninhabited until the 1760s; continuous settlement from 1833,to 1832 CE,Open,Set to n/a 2026-10-26: no people there yet (fix_overlay_overseas.py)
+Map area,Religion,Falkland Islands: uninhabited until the 1760s; continuous settlement from 1833,to 1832 CE,Open,Set to n/a 2026-10-26: no people there yet (fix_overlay_overseas.py)
+Map area,Culture,Bermuda: uninhabited until English settlement in 1609,to 1608 CE,Open,Set to n/a 2026-10-26: no people there yet (fix_overlay_overseas.py)
+Map area,Religion,Bermuda: uninhabited until English settlement in 1609,to 1608 CE,Open,Set to n/a 2026-10-26: no people there yet (fix_overlay_overseas.py)

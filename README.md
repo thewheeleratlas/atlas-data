@@ -26,7 +26,7 @@ The border data started from historical-basemaps. It was rasterized onto the atl
 
 The website keeps its own copies of these files so the map can be served from the site repository. This repository is the corresponding source for those GPL parts. The website source is [thewheeleratlas/website](https://github.com/thewheeleratlas/website).
 
-Six overlay images are identical to a neighbouring year, so they are stored once, and the derived 117 CE, 550 BCE, 525 BCE and 250 BCE maps reuse the layer images of the maps they come from. The site maps the missing names onto the file that is present:
+Six overlay images are identical to a neighbouring year, so they are stored once, and the derived 117 CE, 550 BCE, 525 BCE, 250 BCE, 1250 BCE and 2500 BCE maps reuse the layer images of the maps they come from. The site maps the missing names onto the file that is present:
 
 | Requested file | File used |
 |---|---|
@@ -39,8 +39,10 @@ Six overlay images are identical to a neighbouring year, so they are stored once
 | `rel/117.png`, `cul/117.png`, `dev/117.png` | the 100 CE files (`rel/100.png`, `cul/100.png`, `dev/100.png`) |
 | `rel/bc550.png`, `cul/bc550.png`, `dev/bc550.png`, and the same for `bc525` | the 500 BCE files (`rel/bc500.png`, `cul/bc500.png`, `dev/bc500.png`) |
 | `rel/bc250.png`, `cul/bc250.png`, `dev/bc250.png` | the 300 BCE files (`rel/bc300.png`, `cul/bc300.png`, `dev/bc300.png`) |
+| `rel/bc1250.png`, `cul/bc1250.png`, `dev/bc1250.png` | the 1500 BCE files (`rel/bc1500.png`, `cul/bc1500.png`, `dev/bc1500.png`) |
+| `rel/bc2500.png`, `cul/bc2500.png`, `dev/bc2500.png` | the 3000 BCE files (`rel/bc3000.png`, `cul/bc3000.png`, `dev/bc3000.png`) |
 
-That leaves 61 religion rasters, 63 culture rasters and 62 development rasters for 68 eras. The 117 CE, 550 BCE, 525 BCE and 250 BCE maps are derived from the 100 CE, 500 BCE, 550 BCE and 300 BCE maps by `data-source/scripts/derive-2026/make_117.py`, `make_bc550.py`, `make_bc525.py` and `make_bc250.py`, and use the layer images of the 100 CE and 500 BCE maps. The 1989 and 1975 maps are derived from the 1994 map by `make_1989.py` and `make_1975.py`, and have their own layer images, painted by `cold_war_layers.py`. Every era still has its own file in `site/eras/`.
+That leaves 61 religion rasters, 63 culture rasters and 62 development rasters for 70 eras. The 117 CE, 550 BCE, 525 BCE and 250 BCE maps are derived from the 100 CE, 500 BCE, 550 BCE and 300 BCE maps by `data-source/scripts/derive-2026/make_117.py`, `make_bc550.py`, `make_bc525.py` and `make_bc250.py`, and use the layer images of the 100 CE and 500 BCE maps. The 1250 BCE and 2500 BCE maps are derived from the 1500 BCE and 3000 BCE maps by `make_bc1250.py` and `make_bc2500.py`, and use those maps' layer images. The 1989 and 1975 maps are derived from the 1994 map by `make_1989.py` and `make_1975.py`, and have their own layer images, painted by `cold_war_layers.py`. Every era still has its own file in `site/eras/`.
 
 These files are enough to read and reuse the map data. Rebuilding from upstream needs the extra inputs in the next section.
 

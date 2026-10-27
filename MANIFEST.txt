@@ -1,14 +1,14 @@
 # The Wheeler Atlas map data
 # File sizes in bytes. One file per line: <bytes><TAB><path>
 # MANIFEST.txt is not listed.
-# files: 757
-# bytes: 60949728
+# files: 759
+# bytes: 60705502
 
 35149	LICENSE
-10983	NOTICE.md
+11603	NOTICE.md
 9934	README.md
-12430	data-source/NA-REGISTER.csv
-5893	data-source/NOTICE.md
+12960	data-source/NA-REGISTER.csv
+6617	data-source/NOTICE.md
 5486	data-source/README.md
 35149	data-source/hb-gpl/LICENSE
 826	data-source/hb-gpl/NOTICE.md
@@ -477,11 +477,13 @@
 3400	data-source/scripts/fixes-2026/fix_1530_hasa.py
 3164	data-source/scripts/fixes-2026/fix_1530_iraq.py
 1569	data-source/scripts/fixes-2026/fix_1530_ottoman.py
+4252	data-source/scripts/fixes-2026/fix_1960_palestine.py
 2600	data-source/scripts/fixes-2026/fix_batch3.py
 4532	data-source/scripts/fixes-2026/fix_batch4.py
 4600	data-source/scripts/fixes-2026/fix_batch5.py
 8950	data-source/scripts/fixes-2026/fix_hre_1600.py
 10578	data-source/scripts/fixes-2026/fix_hre_split.py
+8415	data-source/scripts/fixes-2026/fix_overlay_islands.py
 10185	data-source/scripts/fixes-2026/fix_overlay_judgement.py
 16882	data-source/scripts/fixes-2026/fix_overlay_overseas.py
 8791	data-source/scripts/fixes-2026/fix_overlay_qc2.py
@@ -490,7 +492,7 @@
 12161	data-source/scripts/fixes-2026/fix_slivers.py
 34898	data-source/scripts/overlays/cities_hist.py
 1450	data-source/scripts/overlays/common.py
-133351	data-source/scripts/overlays/culture_rules.py
+134779	data-source/scripts/overlays/culture_rules.py
 6122	data-source/scripts/overlays/devindex.py
 809942	data-source/scripts/overlays/maddison2020.csv
 6316	data-source/scripts/overlays/ovmain_build.py
@@ -530,16 +532,16 @@
 118068	site/cul/1914.png
 119534	site/cul/1920.png
 118032	site/cul/1930.png
-117608	site/cul/1938.png
+117611	site/cul/1938.png
 116625	site/cul/1945.png
 115695	site/cul/1960.png
-207145	site/cul/1975.png
-207145	site/cul/1989.png
+116766	site/cul/1975.png
+116766	site/cul/1989.png
 115574	site/cul/1994.png
 106183	site/cul/200.png
 115768	site/cul/2000.png
 116022	site/cul/2010.png
-122904	site/cul/2026.png
+122940	site/cul/2026.png
 106139	site/cul/300.png
 106364	site/cul/400.png
 111073	site/cul/500.png
@@ -564,10 +566,10 @@
 55852	site/cul/bc5000.png
 104009	site/cul/bc700.png
 53508	site/cul/bc8000.png
-244915	site/data/cultures.json
+246603	site/data/cultures.json
 68345	site/data/develop.json
 187007	site/data/eras.json
-286416	site/data/ovmain.json
+286453	site/data/ovmain.json
 194839	site/data/realm-index.json
 43404	site/data/religions.json
 70392	site/dev/100.png
@@ -665,7 +667,7 @@
 319328	site/eras/1930.json
 321751	site/eras/1938.json
 332057	site/eras/1945.json
-328133	site/eras/1960.json
+329398	site/eras/1960.json
 356827	site/eras/1975.json
 352371	site/eras/1989.json
 363203	site/eras/1994.json
@@ -728,15 +730,15 @@
 101359	site/rel/1914.png
 103078	site/rel/1920.png
 101864	site/rel/1930.png
-101944	site/rel/1938.png
+101946	site/rel/1938.png
 99300	site/rel/1945.png
 99403	site/rel/1960.png
-141393	site/rel/1975.png
-141393	site/rel/1989.png
+100154	site/rel/1975.png
+100154	site/rel/1989.png
 99524	site/rel/1994.png
 93721	site/rel/200.png
 99330	site/rel/2000.png
-105872	site/rel/2026.png
+105882	site/rel/2026.png
 94027	site/rel/300.png
 94727	site/rel/400.png
 97078	site/rel/500.png

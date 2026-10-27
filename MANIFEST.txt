@@ -2,7 +2,7 @@
 # File sizes in bytes. One file per line: <bytes><TAB><path>
 # MANIFEST.txt is not listed.
 # files: 759
-# bytes: 60705502
+# bytes: 60772525
 
 35149	LICENSE
 11603	NOTICE.md
@@ -460,7 +460,7 @@
 344788	data-source/hb-gpl/lineages.jsonl
 394969	data-source/hb-gpl/snapshots.jsonl
 172	data-source/requirements.txt
-3184	data-source/scripts/build_realm_index.py
+3518	data-source/scripts/build_realm_index.py
 1458	data-source/scripts/common.py
 2191	data-source/scripts/derive-2026/cold_war.py
 6318	data-source/scripts/derive-2026/cold_war_layers.py
@@ -570,7 +570,7 @@
 68345	site/data/develop.json
 187007	site/data/eras.json
 286453	site/data/ovmain.json
-194839	site/data/realm-index.json
+261528	site/data/realm-index.json
 43404	site/data/religions.json
 70392	site/dev/100.png
 102253	site/dev/1000.png

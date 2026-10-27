@@ -419,6 +419,18 @@ for cid, n, fam, w, d in C:
     r, g, b = colorsys.hls_to_rgb(((h + _DH[k % 10]) % 360) / 360, _L[k % 10], min(0.85, s + (0.08 if k % 3 == 1 else 0)))
     FAITHS.append(dict(id=cid, n=n, fam=fam, c='#%02x%02x%02x' % (round(r * 255), round(g * 255), round(b * 255)), w=w, d=d))
 FAITHS.append(dict(id='na', n='n/a (unknown or uncertain)', fam='na', c='#6f6c66', d="No category is shown here: the population is unknown, too mixed or too disputed to name one group, or the land was uninhabited. Every n/a area is listed in the atlas's n/a register."))
+# added 27 Oct 2026 (fixes-2026/fix_overlay_islands.py): after 'na', so the indexes of the deployed rasters stay the same
+C_ADDED = [
+    ('maldivian', 'Maldivian (Dhivehi)', 'indo_aryan', 'Maldivians', 'The Dhivehi-speaking people of the Maldives, Muslim since the 12th century.'),
+    ('luso_creole', 'Cape Verdean and São Toméan Creole', 'creole', 'Cape Verdeans', 'The Portuguese-African Creole peoples of Cape Verde and São Tomé and Príncipe (Kriolu and Forro).'),
+    ('seychellois', 'Seychellois Creole', 'creole', 'Seychellois Creole', 'The French-based Creole people of the Seychelles.'),
+    ('micronesian', 'Micronesian', 'austronesian', 'Micronesians', 'The peoples of the Micronesian islands: Chamorro, Palauan, Chuukese, Marshallese, I-Kiribati and others.'),
+]
+for cid, n, fam, w, d in C_ADDED:
+    k = _seen.get(fam, 0); _seen[fam] = k + 1
+    h, s = _FAMH[fam]
+    r, g, b = colorsys.hls_to_rgb(((h + _DH[k % 10]) % 360) / 360, _L[k % 10], min(0.85, s + (0.08 if k % 3 == 1 else 0)))
+    FAITHS.append(dict(id=cid, n=n, fam=fam, c='#%02x%02x%02x' % (round(r * 255), round(g * 255), round(b * 255)), w=w, d=d))
 _ids = [f['id'] for f in FAITHS]
 assert len(set(_ids)) == len(_ids), 'duplicate culture id'
 
@@ -1052,7 +1064,8 @@ R(900, E, 'tamil', a1={'IND': ['Tamil Nadu', 'Puducherry']})
 R(900, E, 'malayali', a1={'IND': ['Kerala']})
 R(-300, E, 'kannada', a1={'IND': ['Karnataka']})
 R(-300, E, 'telugu', a1={'IND': ['Andhra Pradesh', 'Telangana']})
-R(-500, E, 'sinhalese', a0=['LKA', 'MDV'])
+R(-500, E, 'sinhalese', a0=['LKA'])
+R(-500, E, 'maldivian', a0=['MDV'])
 R(1200, E, 'tamil', a1={'LKA': LK_TAMIL})
 
 # ================================================================== 6. China, Mongolia, Korea, Japan
@@ -1562,11 +1575,14 @@ G(1493, 1650, 'hisp_carib', 'Cuba, Hispaniola, Puerto Rico and Jamaica under ear
 G(1650, 1783, 'na', 'Bahamas and Trinidad: small, mixed populations', a0=['BHS', 'TTO'])
 G(B, 1600, 'na', 'Saint Pierre and Miquelon: no settled population', a0=['SPM'])
 G(1601, E, 'french', 'Saint Pierre and Miquelon: French', a0=['SPM'])
-G(1900, E, 'na', 'Cabo Verde, Sao Tome and Seychelles: Creole peoples (no category on this map)', a0=['CPV', 'STP', 'SYC'])
+G(1900, E, 'luso_creole', 'Cabo Verde and Sao Tome: Portuguese-African Creole peoples', a0=['CPV', 'STP'])
+G(1900, E, 'seychellois', 'Seychelles: Seychellois Creole', a0=['SYC'])
 G(1900, E, 'hindustani', 'Mauritius: Indo-Mauritian (mostly Bhojpuri-descended) majority', a0=['MUS'])
 G(1700, E, 'english', 'Saint Helena: English-speaking', a0=['SHN'])
 G(1914, 1945, 'japanese', 'Northern Marianas under Japan: Japanese settlers outnumbered Chamorros', a0=['MNP'])
-G(B, E, 'na', 'Micronesia (Chamorro, Palauan, Chuukese, I-Kiribati): no Micronesian category on this map', a0=['GUM', 'MNP', 'PLW', 'FSM', 'KIR', 'MHL', 'NRU'])
+G(B, -1501, 'na', 'Micronesia before settlement (from about 1500 BCE)', a0=['GUM', 'MNP', 'PLW', 'FSM', 'KIR', 'MHL', 'NRU'])
+G(1946, E, 'na', 'Northern Marianas: Chamorro, Carolinian and Filipino, no majority', a0=['MNP'])
+G(-1500, E, 'micronesian', 'Micronesia: Chamorro, Palauan, Chuukese, Marshallese, I-Kiribati', a0=['GUM', 'MNP', 'PLW', 'FSM', 'KIR', 'MHL', 'NRU'])
 # uninhabited before first settlement
 G(B, 1210, 'na', 'New Zealand before Maori settlement (c. 1250-1300; earlier dates disputed): probably uninhabited', a0=['NZL'])
 G(1211, 1279, 'maori', 'New Zealand: first Maori settlement', a0=['NZL'])

@@ -28,12 +28,12 @@ Map area,Culture,"Anatolia under the Seljuks of Rum: Greek, Armenian and Turkish
 Map area,Culture,"Caribbean islands after contact: native peoples dying out, few settlers yet",1500 CE to 1600 CE (3 maps),Open,
 Map area,Culture,"Bahamas and Trinidad: small, mixed populations",1650 CE to 1783 CE (5 maps),Open,
 Map area,Culture,"Western Hispaniola: buccaneers and early French settlers, few people",1650 CE,Open,
-Map area,Culture,"Micronesia (Chamorro, Palauan, Chuukese, I-Kiribati): no Micronesian category on this map",1938 CE to 2026 CE (2 maps),Open,
+Map area,Culture,"Micronesia (Chamorro, Palauan, Chuukese, I-Kiribati): no Micronesian category on this map",1938 CE to 2026 CE (2 maps),Closed,Given a culture 2026-10-27 (fix_overlay_islands.py); the Northern Mariana Islands stay n/a (no majority)
 Map area,Culture,"Cyprus UN buffer zone: demilitarised, almost no residents",1994 CE to 2026 CE (4 maps),Open,
 Map area,Culture,Antarctic and sub-Antarctic islands: no permanent population,2026 CE,Open,
 Map area,Culture,"Christmas, Cocos and Chagos islands: very small, mixed or military populations",2026 CE,Open,
-Map area,Culture,"Cabo Verde, Sao Tome and Seychelles: Creole peoples (no category on this map)",2026 CE,Open,
-Info panel (main value of a territory),Culture,Cabo Verde,2026 CE,Open,
+Map area,Culture,"Cabo Verde, Sao Tome and Seychelles: Creole peoples (no category on this map)",2026 CE,Closed,Given a culture 2026-10-27 (fix_overlay_islands.py)
+Info panel (main value of a territory),Culture,Cabo Verde,2026 CE,Closed,Given a culture 2026-10-27 (fix_overlay_islands.py)
 Info panel (main value of a territory),Culture,Calicuas,1450 CE to 1750 CE (10 maps),Open,
 Info panel (main value of a territory),Culture,Coharie,1450 CE to 1492 CE (3 maps),Open,
 Info panel (main value of a territory),Culture,County of Edessa,1100 CE,Open,
@@ -41,24 +41,24 @@ Info panel (main value of a territory),Culture,Cyprus U.N. Buffer Zone,2026 CE,O
 Info panel (main value of a territory),Culture,Dacians,500 CE,Open,
 Info panel (main value of a territory),Culture,Dardania,200 BCE,Open,
 Info panel (main value of a territory),Culture,Fr. S. Antarctic Lands,2026 CE,Open,
-Info panel (main value of a territory),Culture,Guam,1938 CE to 2026 CE (2 maps),Open,
+Info panel (main value of a territory),Culture,Guam,1938 CE to 2026 CE (2 maps),Closed,Given a culture 2026-10-27 (fix_overlay_islands.py)
 Info panel (main value of a territory),Culture,Heard I. and McDonald Is.,2026 CE,Open,
 Info panel (main value of a territory),Culture,Hunters-gatherers,10000 BCE to 3000 BCE (4 maps),Open,
 Info panel (main value of a territory),Culture,Karankawa,1530 CE to 1750 CE (6 maps),Open,
 Info panel (main value of a territory),Culture,Kelteminar,5000 BCE,Open,
-Info panel (main value of a territory),Culture,Kiribati,2026 CE,Open,
+Info panel (main value of a territory),Culture,Kiribati,2026 CE,Closed,Given a culture 2026-10-27 (fix_overlay_islands.py)
 Info panel (main value of a territory),Culture,Lusatian culture,700 BCE to 323 BCE (3 maps),Open,
 Info panel (main value of a territory),Culture,Massawomeck,1450 CE to 1492 CE (3 maps),Open,
-Info panel (main value of a territory),Culture,Micronesia,2026 CE,Open,
+Info panel (main value of a territory),Culture,Micronesia,2026 CE,Closed,Given a culture 2026-10-27 (fix_overlay_islands.py)
 Info panel (main value of a territory),Culture,Māori,1000 CE to 1210 CE (5 maps),Open,
 Info panel (main value of a territory),Culture,N. Mariana Is.,2026 CE,Open,
 Info panel (main value of a territory),Culture,Nordic Late Neolithic (Dagger period),1500 BCE,Open,
 Info panel (main value of a territory),Culture,Norse peoples,500 CE to 1066 CE (5 maps),Open,
-Info panel (main value of a territory),Culture,Palau,2026 CE,Open,
+Info panel (main value of a territory),Culture,Palau,2026 CE,Closed,Given a culture 2026-10-27 (fix_overlay_islands.py)
 Info panel (main value of a territory),Culture,Principality of Antioch,1200 CE to 1210 CE (2 maps),Open,
 Info panel (main value of a territory),Culture,S. Geo. and the Is.,2026 CE,Open,
-Info panel (main value of a territory),Culture,Seychelles,2026 CE,Open,
-Info panel (main value of a territory),Culture,São Tomé and Principe,2026 CE,Open,
+Info panel (main value of a territory),Culture,Seychelles,2026 CE,Closed,Given a culture 2026-10-27 (fix_overlay_islands.py)
+Info panel (main value of a territory),Culture,São Tomé and Principe,2026 CE,Closed,Given a culture 2026-10-27 (fix_overlay_islands.py)
 Info panel (main value of a territory),Culture,S’atsoyaha (Yuchi),1530 CE to 1750 CE (6 maps),Open,
 Info panel (main value of a territory),Culture,Taíno and Kalinago peoples,1530 CE to 1700 CE (4 maps),Open,
 Info panel (main value of a territory),Culture,Trinidad,1715 CE to 1750 CE (2 maps),Open,

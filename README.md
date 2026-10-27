@@ -40,7 +40,7 @@ Six overlay images are identical to a neighbouring year, so they are stored once
 | `rel/bc550.png`, `cul/bc550.png`, `dev/bc550.png`, and the same for `bc525` | the 500 BCE files (`rel/bc500.png`, `cul/bc500.png`, `dev/bc500.png`) |
 | `rel/bc250.png`, `cul/bc250.png`, `dev/bc250.png` | the 300 BCE files (`rel/bc300.png`, `cul/bc300.png`, `dev/bc300.png`) |
 
-That leaves 59 religion rasters, 61 culture rasters and 60 development rasters for 66 eras. The 117 CE, 550 BCE, 525 BCE and 250 BCE maps are derived from the 100 CE, 500 BCE, 550 BCE and 300 BCE maps by `data-source/scripts/derive-2026/make_117.py`, `make_bc550.py`, `make_bc525.py` and `make_bc250.py`, and use the layer images of the 100 CE and 500 BCE maps. Every era still has its own file in `site/eras/`.
+That leaves 61 religion rasters, 63 culture rasters and 62 development rasters for 68 eras. The 117 CE, 550 BCE, 525 BCE and 250 BCE maps are derived from the 100 CE, 500 BCE, 550 BCE and 300 BCE maps by `data-source/scripts/derive-2026/make_117.py`, `make_bc550.py`, `make_bc525.py` and `make_bc250.py`, and use the layer images of the 100 CE and 500 BCE maps. The 1989 and 1975 maps are derived from the 1994 map by `make_1989.py` and `make_1975.py`, and have their own layer images, painted by `cold_war_layers.py`. Every era still has its own file in `site/eras/`.
 
 These files are enough to read and reuse the map data. Rebuilding from upstream needs the extra inputs in the next section.
 
@@ -77,6 +77,7 @@ python3 fixes-2026/fix_batch5.py "$HHA_SITE/eras" "$HHA_SITE/data"
 python3 fixes-2026/fix_1530_ottoman.py "$HHA_SITE/eras"
 python3 fixes-2026/fix_1530_iraq.py "$HHA_SITE"
 (cd derive-2026 && python3 make_117.py "$HHA_SITE" && python3 make_bc550.py "$HHA_SITE" && python3 make_bc525.py "$HHA_SITE" && python3 make_bc250.py "$HHA_SITE")
+(cd derive-2026 && python3 make_1989.py "$HHA_SITE" && python3 make_1975.py "$HHA_SITE")
 python3 build_realm_index.py
 ```
 
@@ -89,6 +90,8 @@ python3 s8_religion.py religion
 python3 s8_religion.py culture
 python3 s10_develop.py
 ```
+
+The layers of the 1975 and 1989 maps are painted by `derive-2026/cold_war_layers.py "$HHA_SITE" "$HHA_WORKDIR"` once the other layers and their 2026 corrections are in place; it runs these scripts for those years and carries the corrections of the 1960 and 1994 layers into them.
 
 Each layer is a list of ordered rules in `religion_rules.py` and `culture_rules.py`: first year, last year, faith or culture, and where. A later rule overrides an earlier one. Where a faith or culture is unknown, too mixed, too disputed, or the land was uninhabited, the rules use `na` instead of guessing. Every such area is listed in [`data-source/NA-REGISTER.csv`](data-source/NA-REGISTER.csv).
 

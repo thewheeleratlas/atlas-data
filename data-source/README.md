@@ -17,6 +17,7 @@ scripts/
                           ovmain_build.py, popw.py, devindex.py (+ maddison2020.csv)
   fixes-2026/             fix_batch3.py, fix_batch4.py, fix_batch5.py: October 2026 name corrections; fix_1530_ottoman.py: 1530 Mamluk lands to the Ottomans; fix_1530_iraq.py: 1530 Iraq, Azerbaijan and western Iran to the Safavids
   derive-2026/            make_117.py, make_bc550.py, make_bc525.py, make_bc250.py (+ era_tools.py): the 117 CE, 550 BCE, 525 BCE and 250 BCE maps, derived from the 100 CE, 500 BCE, 550 BCE and 300 BCE maps applied to the era files;
+                          make_1989.py, make_1975.py (+ cold_war.py): the 1989 and 1975 maps, derived from the 1994 map; cold_war_layers.py: their religion, culture and development layers;
                           build_disputed.py: hatched disputed areas (Natural Earth, public domain)
   unpack_eras.py          writes the deployed era rasters back out as PNG files
 ```

@@ -425,6 +425,9 @@ C_ADDED = [
     ('luso_creole', 'Cape Verdean and São Toméan Creole', 'creole', 'Cape Verdeans', 'The Portuguese-African Creole peoples of Cape Verde and São Tomé and Príncipe (Kriolu and Forro).'),
     ('seychellois', 'Seychellois Creole', 'creole', 'Seychellois Creole', 'The French-based Creole people of the Seychelles.'),
     ('micronesian', 'Micronesian', 'austronesian', 'Micronesians', 'The peoples of the Micronesian islands: Chamorro, Palauan, Chuukese, Marshallese, I-Kiribati and others.'),
+    # added 28 Oct 2026 (fixes-2026/fix_overlay_qc3.py)
+    ('coastal_ecuador', 'Coastal Ecuadorian peoples', 'andean', 'Valdivia culture', 'The peoples of coastal Ecuador, from the Valdivia and Chorrera cultures to the Manteño-Huancavilca, whom the Inca never ruled.'),
+    ('comanche', 'Comanche', 'n_american', 'Comanche', 'The Comanche of the southern Plains (Comanchería), who parted from the Shoshone about 1700.'),
 ]
 for cid, n, fam, w, d in C_ADDED:
     k = _seen.get(fam, 0); _seen[fam] = k + 1

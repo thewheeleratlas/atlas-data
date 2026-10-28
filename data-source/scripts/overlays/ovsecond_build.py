@@ -5,8 +5,10 @@ discounted. The second group is the largest after the main one already stored in
 included), leaving out "n/a" (unknown or unpeopled). It is kept only when it holds at least MIN_SHARE of the
 territory's estimated people, so a few border pixels of a neighbour's faith do not show as a second faith.
 
-Rows become [main faith, main culture, development score, GDP per person, second faith, second culture], the last
-two 1-based indexes into religions.json / cultures.json items, or 0 for none.
+Rows become [main faith, main culture, development score, GDP per person, second faith, second culture, main faith %,
+main culture %, second faith %, second culture %]: the second groups as 1-based indexes into religions.json /
+cultures.json items (0 for none), the shares as whole percents of the estimated people, leaving out "n/a" (0 when not
+known: when the main group is "n/a", or is a hand correction the estimate puts below the second group).
 
 Usage (from data-source/scripts/overlays/):
     HHA_ATLAS=<site>/ python3 ovsecond_build.py <site>/ <terrain4096.npy>
@@ -40,28 +42,34 @@ for e in json.load(open(SITE + 'data/eras.json'))['eras']:
     w = (A * HAB * (dev + 2) ** 1.5).ravel(); flat = ids.ravel()
     rows = ov['eras'][f]
     assert len(rows) == n - 1, (f, len(rows), n - 1)
-    seconds = []
+    seconds, shares = [], []
     for col, (arr, items) in enumerate([(rel, RI), (cul, CI)]):
         k = len(items) + 1
         M = np.bincount(flat * k + arr.ravel(), weights=w, minlength=n * k).reshape(n, k); M[:, 0] = 0
         na = next((i + 1 for i, x in enumerate(items) if x['id'] == 'na'), None)
         if na: M[:, na] = 0
         tot = M.sum(axis=1)
-        sec = np.zeros(n, int)
+        sec = np.zeros(n, int); sh = np.zeros((n, 2), int)
         for i in range(1, n):
             main = rows[i - 1][col]
             m = M[i].copy()
             if main: m[main] = 0
             b = int(m.argmax())
             if tot[i] > 0 and m[b] >= MIN_SHARE * tot[i]: sec[i] = b
-        seconds.append(sec)
+            if tot[i] > 0 and main and main != na:
+                sh[i] = [round(100 * M[i, main] / tot[i]), round(100 * M[i, sec[i]] / tot[i]) if sec[i] else 0]
+                if sec[i] and sh[i, 0] < sh[i, 1]: sh[i] = 0   # a hand-corrected main the estimate puts second: no shares
+        seconds.append(sec); shares.append(sh)
     for i, r in enumerate(rows):
         del r[4:]
-        r += [int(seconds[0][i + 1]), int(seconds[1][i + 1])]
+        r += [int(seconds[0][i + 1]), int(seconds[1][i + 1]),
+              int(shares[0][i + 1, 0]), int(shares[1][i + 1, 0]), int(shares[0][i + 1, 1]), int(shares[1][i + 1, 1])]
         total += 1; shown[0] += r[4] > 0; shown[1] += r[5] > 0
 ov['about'] = ('Per territory and era: [main faith, main culture (1-based indexes into religions.json / cultures.json items), '
                'development score 0-100 relative to its era, GDP per person in 2011 dollars (0 before 1815), second faith, '
-               'second culture (indexes as before, 0 when no other group holds 10% of the people)]. Population-weighted '
+               'second culture (indexes as before, 0 when no other group holds 10% of the people), estimated % of the people in '
+               'the main faith, main culture, second faith and second culture (0 when not known: an unknown main group, or a '
+               'hand-corrected main group the estimate puts second)]. Population-weighted '
                'estimates plus hand corrections.')
 open(ovp, 'w').write(json.dumps(ov, separators=(',', ':')))
 print(f'{total} territories: second faith on {shown[0]}, second culture on {shown[1]}')

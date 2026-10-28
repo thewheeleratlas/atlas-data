@@ -1,14 +1,14 @@
 # The Wheeler Atlas map data
 # File sizes in bytes. One file per line: <bytes><TAB><path>
 # MANIFEST.txt is not listed.
-# files: 765
-# bytes: 61785090
+# files: 766
+# bytes: 61919845
 
 35149	LICENSE
-14417	NOTICE.md
+15133	NOTICE.md
 10375	README.md
 12960	data-source/NA-REGISTER.csv
-9090	data-source/NOTICE.md
+9806	data-source/NOTICE.md
 5486	data-source/README.md
 35149	data-source/hb-gpl/LICENSE
 826	data-source/hb-gpl/NOTICE.md
@@ -494,6 +494,7 @@
 8836	data-source/scripts/fixes-2026/fix_realm_qc2.py
 19010	data-source/scripts/fixes-2026/fix_realm_qc3.py
 12161	data-source/scripts/fixes-2026/fix_slivers.py
+8721	data-source/scripts/fixes-2026/fix_steppe.py
 34898	data-source/scripts/overlays/cities_hist.py
 1450	data-source/scripts/overlays/common.py
 134779	data-source/scripts/overlays/culture_rules.py
@@ -572,9 +573,9 @@
 53508	site/cul/bc8000.png
 248253	site/data/cultures.json
 68903	site/data/develop.json
-188513	site/data/eras.json
-289009	site/data/ovmain.json
-263461	site/data/realm-index.json
+189321	site/data/eras.json
+289127	site/data/ovmain.json
+263718	site/data/realm-index.json
 43930	site/data/religions.json
 70392	site/dev/100.png
 102253	site/dev/1000.png
@@ -638,11 +639,11 @@
 54761	site/dev/bc500.png
 1353	site/dev/bc5000.png
 24297	site/dev/bc700.png
-388980	site/eras/100.json
-480787	site/eras/1000.json
+405326	site/eras/100.json
+480832	site/eras/1000.json
 426514	site/eras/1066.json
 409469	site/eras/1100.json
-391018	site/eras/117.json
+407245	site/eras/117.json
 661320	site/eras/1200.json
 660399	site/eras/1210.json
 643786	site/eras/1279.json
@@ -675,38 +676,38 @@
 356827	site/eras/1975.json
 352371	site/eras/1989.json
 363203	site/eras/1994.json
-399751	site/eras/200.json
+416545	site/eras/200.json
 362712	site/eras/2000.json
 363073	site/eras/2010.json
 395049	site/eras/2026.json
-406375	site/eras/300.json
-435919	site/eras/400.json
-449575	site/eras/500.json
-481761	site/eras/600.json
-455011	site/eras/700.json
-402924	site/eras/800.json
-393684	site/eras/900.json
-375452	site/eras/bc1.json
-377575	site/eras/bc100.json
-330147	site/eras/bc1000.json
+423292	site/eras/300.json
+452764	site/eras/400.json
+466924	site/eras/500.json
+481924	site/eras/600.json
+455194	site/eras/700.json
+402963	site/eras/800.json
+393696	site/eras/900.json
+392059	site/eras/bc1.json
+378848	site/eras/bc100.json
+330320	site/eras/bc1000.json
 542364	site/eras/bc10000.json
 44723	site/eras/bc123000.json
-343013	site/eras/bc1250.json
-327558	site/eras/bc1500.json
-347075	site/eras/bc200.json
+343182	site/eras/bc1250.json
+327731	site/eras/bc1500.json
+348169	site/eras/bc200.json
 491047	site/eras/bc2000.json
-364829	site/eras/bc250.json
+365220	site/eras/bc250.json
 511785	site/eras/bc2500.json
-368278	site/eras/bc300.json
+368669	site/eras/bc300.json
 495731	site/eras/bc3000.json
-367419	site/eras/bc323.json
-341874	site/eras/bc400.json
+367810	site/eras/bc323.json
+342276	site/eras/bc400.json
 537455	site/eras/bc4000.json
-342829	site/eras/bc500.json
+343226	site/eras/bc500.json
 529929	site/eras/bc5000.json
-350282	site/eras/bc525.json
-350685	site/eras/bc550.json
-339563	site/eras/bc700.json
+350679	site/eras/bc525.json
+351082	site/eras/bc550.json
+339807	site/eras/bc700.json
 539047	site/eras/bc8000.json
 93420	site/rel/100.png
 100069	site/rel/1000.png

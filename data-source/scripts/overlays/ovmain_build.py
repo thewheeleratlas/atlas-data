@@ -32,7 +32,7 @@ CURATED = [  # (territory names, first year, last year, main faith, main culture
     (['Niger'], 1945, 2026, None, 'Hausa'),
     (['French West Africa'], 1895, 1958, None, 'Mande (Mandinka, Bambara, Soninke)'),
     (['Grand Duchy of Moscow', 'Tsardom of Russia', 'Russian Empire', 'Russia'], 1400, 2026, 'Eastern Orthodox Christianity', 'Russian'),
-    (['Makkura'], 600, 1400, 'Oriental Orthodox Christianity', 'Nubian'),
+    (['Makuria'], 600, 1400, 'Oriental Orthodox Christianity', 'Nubian'),
     (['Roman Republic', 'Roman Empire'], -100, 299, None, 'Latin (Roman)'),
     (['Byzantine Empire'], 1300, 1300, None, 'Greek'),   # the 1300 outline still holds Turkish-settled Anatolia   # the Latin West counts as several cultures, so Greek was largest
     (['Volga Bulgars'], 922, 1240, 'Sunni Islam', None),

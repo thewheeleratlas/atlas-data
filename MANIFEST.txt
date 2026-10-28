@@ -2,7 +2,7 @@
 # File sizes in bytes. One file per line: <bytes><TAB><path>
 # MANIFEST.txt is not listed.
 # files: 776
-# bytes: 64517397
+# bytes: 64517395
 
 35149	LICENSE
 25771	NOTICE.md
@@ -584,7 +584,7 @@
 249390	site/data/cultures.json
 68903	site/data/develop.json
 200196	site/data/eras.json
-648989	site/data/ovmain.json
+648987	site/data/ovmain.json
 265732	site/data/realm-index.json
 43910	site/data/religions.json
 70392	site/dev/100.png

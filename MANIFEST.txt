@@ -2,7 +2,7 @@
 # File sizes in bytes. One file per line: <bytes><TAB><path>
 # MANIFEST.txt is not listed.
 # files: 777
-# bytes: 64537633
+# bytes: 64538890
 
 35149	LICENSE
 26539	NOTICE.md
@@ -11,7 +11,7 @@
 20993	data-source/NOTICE.md
 5486	data-source/README.md
 35149	data-source/hb-gpl/LICENSE
-826	data-source/hb-gpl/NOTICE.md
+885	data-source/hb-gpl/NOTICE.md
 86459	data-source/hb-gpl/crosswalk.jsonl
 1072	data-source/hb-gpl/era_notes.jsonl
 108	data-source/hb-gpl/geom/1200/a-i-cofan-kofan.png
@@ -584,9 +584,9 @@
 53508	site/cul/bc8000.png
 249390	site/data/cultures.json
 68903	site/data/develop.json
-200196	site/data/eras.json
-648987	site/data/ovmain.json
-265732	site/data/realm-index.json
+200715	site/data/eras.json
+649304	site/data/ovmain.json
+266094	site/data/realm-index.json
 43910	site/data/religions.json
 70392	site/dev/100.png
 102253	site/dev/1000.png

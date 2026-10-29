@@ -1,12 +1,13 @@
 # The Wheeler Atlas map data
 # File sizes in bytes. One file per line: <bytes><TAB><path>
 # MANIFEST.txt is not listed.
-# files: 780
-# bytes: 64727526
+# files: 781
+# bytes: 64728766
 
+963	CONTRIBUTING.md
 35149	LICENSE
 29038	NOTICE.md
-10375	README.md
+10652	README.md
 12960	data-source/NA-REGISTER.csv
 23381	data-source/NOTICE.md
 5486	data-source/README.md

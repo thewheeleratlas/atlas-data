@@ -15,6 +15,7 @@ Historical borders for each year the atlas shows, plus the religion, culture and
 | Realm search index: which era maps each realm name appears on, built from `site/eras/` by `data-source/scripts/build_realm_index.py` | `site/data/realm-index.json` | GPL-3.0 |
 | Religion, culture and development rasters | `site/rel/`, `site/cul/`, `site/dev/` | GPL-3.0 |
 | Layer indexes and the per-territory summaries made from them | `site/data/religions.json`, `cultures.json`, `develop.json`, `ovmain.json` | GPL-3.0 |
+| Scripts that turn the era maps into files the website serves: the "Who ruled here" tiles (`site/here/` on the website) and the daily puzzle list (`site/data/daily.json`). They are the website's own copies and read its folder layout. | `data-source/scripts/site/` | GPL-3.0 |
 | Build scripts, correction scripts, the n/a register, and the 2026 correction records | `data-source/` | GPL-3.0 |
 | Income figures used by the development score from 1815 | `data-source/scripts/overlays/maddison2020.csv` | **CC BY 4.0**, Maddison Project Database 2020 (Bolt and van Zanden) via [Our World in Data](https://github.com/owid/owid-datasets). This file stays under CC BY 4.0. |
 

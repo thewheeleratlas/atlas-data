@@ -1,8 +1,8 @@
 # The Wheeler Atlas map data
 # File sizes in bytes. One file per line: <bytes><TAB><path>
 # MANIFEST.txt is not listed.
-# files: 781
-# bytes: 64728766
+# files: 783
+# bytes: 64737000
 
 963	CONTRIBUTING.md
 35149	LICENSE
@@ -522,6 +522,8 @@
 8008	data-source/scripts/overlays/s8_religion.py
 3087	data-source/scripts/s1_masks.py
 37260	data-source/scripts/s6_eras.py
+4036	data-source/scripts/site/build-daily.py
+4198	data-source/scripts/site/build-here-tiles.py
 942	data-source/scripts/unpack_eras.py
 105821	site/cul/100.png
 116971	site/cul/1000.png

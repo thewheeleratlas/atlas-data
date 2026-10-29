@@ -2,13 +2,13 @@
 # File sizes in bytes. One file per line: <bytes><TAB><path>
 # MANIFEST.txt is not listed.
 # files: 779
-# bytes: 64566141
+# bytes: 64711716
 
 35149	LICENSE
-27934	NOTICE.md
+29038	NOTICE.md
 10375	README.md
 12960	data-source/NA-REGISTER.csv
-22364	data-source/NOTICE.md
+23381	data-source/NOTICE.md
 5486	data-source/README.md
 35149	data-source/hb-gpl/LICENSE
 826	data-source/hb-gpl/NOTICE.md
@@ -586,9 +586,9 @@
 53508	site/cul/bc8000.png
 249390	site/data/cultures.json
 68903	site/data/develop.json
-200959	site/data/eras.json
-649468	site/data/ovmain.json
-266135	site/data/realm-index.json
+201541	site/data/eras.json
+650022	site/data/ovmain.json
+266370	site/data/realm-index.json
 43910	site/data/religions.json
 70392	site/dev/100.png
 102253	site/dev/1000.png
@@ -653,34 +653,34 @@
 1353	site/dev/bc5000.png
 24297	site/dev/bc700.png
 401572	site/eras/100.json
-500857	site/eras/1000.json
-446720	site/eras/1066.json
-429466	site/eras/1100.json
+501077	site/eras/1000.json
+446940	site/eras/1066.json
+429686	site/eras/1100.json
 403503	site/eras/117.json
-728186	site/eras/1200.json
-730335	site/eras/1210.json
-710873	site/eras/1279.json
-712431	site/eras/1300.json
-755595	site/eras/1400.json
-1381332	site/eras/1450.json
-1381977	site/eras/1453.json
-1357086	site/eras/1492.json
-921945	site/eras/1500.json
-940307	site/eras/1530.json
-1141162	site/eras/1600.json
-1086333	site/eras/1650.json
-929959	site/eras/1700.json
-922785	site/eras/1715.json
-939386	site/eras/1750.json
-881751	site/eras/1783.json
-886117	site/eras/1800.json
-640477	site/eras/1815.json
-544843	site/eras/1848.json
-408764	site/eras/1871.json
-404362	site/eras/1878.json
-400140	site/eras/1880.json
-366447	site/eras/1900.json
-317788	site/eras/1914.json
+728406	site/eras/1200.json
+730981	site/eras/1210.json
+711093	site/eras/1279.json
+712651	site/eras/1300.json
+755701	site/eras/1400.json
+1381309	site/eras/1450.json
+1381954	site/eras/1453.json
+1357052	site/eras/1492.json
+921889	site/eras/1500.json
+940960	site/eras/1530.json
+1141867	site/eras/1600.json
+1086031	site/eras/1650.json
+929190	site/eras/1700.json
+921884	site/eras/1715.json
+938874	site/eras/1750.json
+883062	site/eras/1783.json
+887611	site/eras/1800.json
+642042	site/eras/1815.json
+610590	site/eras/1848.json
+431466	site/eras/1871.json
+427273	site/eras/1878.json
+422891	site/eras/1880.json
+369210	site/eras/1900.json
+318323	site/eras/1914.json
 348067	site/eras/1920.json
 335695	site/eras/1930.json
 338044	site/eras/1938.json
@@ -693,11 +693,11 @@
 362712	site/eras/2000.json
 363073	site/eras/2010.json
 395049	site/eras/2026.json
-420668	site/eras/300.json
-451869	site/eras/400.json
+420353	site/eras/300.json
+451526	site/eras/400.json
 463685	site/eras/500.json
 499229	site/eras/600.json
-473157	site/eras/700.json
+473309	site/eras/700.json
 420375	site/eras/800.json
 411547	site/eras/900.json
 393114	site/eras/bc1.json
